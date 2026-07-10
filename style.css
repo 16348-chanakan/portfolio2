@@ -80,3 +80,45 @@ transition:.3s;
 .btn:hover{
 background:#ff4f7b;
 }
+/* style.css - Starter theme */
+:root{
+ --pink:#ff8fb1;
+ --light:#fff7fa;
+ --rose:#ffd9e5;
+ --red:#ff6f91;
+ --text:#444;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Kanit',sans-serif}
+html{scroll-behavior:smooth}
+body{
+background:linear-gradient(135deg,#fff 0%,#ffeaf1 55%,#fff7fa 100%);
+color:var(--text);
+}
+body::before{
+content:"";
+position:fixed;inset:0;pointer-events:none;opacity:.15;
+background:
+radial-gradient(circle at 15% 20%,#ffc7d8 0 8px,transparent 9px),
+radial-gradient(circle at 70% 30%,#ffd6e2 0 10px,transparent 11px),
+radial-gradient(circle at 35% 80%,#ffc7d8 0 7px,transparent 8px);
+}
+header{position:sticky;top:0;display:flex;justify-content:space-between;align-items:center;padding:18px 8%;background:rgba(255,255,255,.8);backdrop-filter:blur(10px);box-shadow:0 6px 18px rgba(0,0,0,.08);z-index:99}
+.logo{font-size:1.6rem;font-weight:700;color:var(--red)}
+nav a{text-decoration:none;color:var(--text);margin-left:24px;font-weight:500;transition:.3s}
+nav a:hover,nav a.active{color:var(--red)}
+.hero{min-height:88vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:40px}
+.profile{width:220px;height:220px;border-radius:50%;object-fit:cover;border:8px solid #fff;box-shadow:0 10px 25px rgba(0,0,0,.12)}
+.hero h1{font-size:3rem;color:var(--red);margin-top:20px}
+.hero p{margin-top:10px}
+.btn{display:inline-block;margin-top:25px;padding:14px 32px;border-radius:40px;background:linear-gradient(45deg,var(--pink),var(--red));color:#fff;text-decoration:none;transition:.3s}
+.btn:hover{transform:translateY(-4px) scale(1.05)}
+.card{background:rgba(255,255,255,.85);border-radius:22px;box-shadow:0 12px 28px rgba(0,0,0,.08);padding:28px}
+.fade{opacity:0;transform:translateY(30px);transition:all .8s}
+.fade.show{opacity:1;transform:none}
+@media(max-width:768px){
+header{padding:16px 5%;flex-direction:column;gap:10px}
+nav a{margin:0 8px}
+.hero h1{font-size:2.2rem}
+.profile{width:170px;height:170px}
+}
+
