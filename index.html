@@ -1,87 +1,41 @@
 <!DOCTYPE html>
-<html lang='th'>
-<head>
-<meta charset='UTF-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0'>
-<title>Portfolio | ชนากานต์ เชื้อพงษ์พันธ์</title>
-<link rel='preconnect' href='https://fonts.googleapis.com'>
-<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
-<link href='https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap' rel='stylesheet'>
-<link rel='stylesheet' href='style.css'>
-</head>
-<body>
-<header>
-<div class='logo'>Portfolio</div>
-<nav>
-<a class='active' href='index.html'>Home</a>
-<a href='about.html'>About</a>
-<a href='education.html'>Education</a>
-<a href='skills.html'>Skills</a>
-<a href='contact.html'>Contact</a>
-</nav>
-</header>
-<section class='hero fade'>
-<img src='images/profile.jpg' class='profile' alt='Profile'>
-<h1>Hello, I'm Nana</h1>
-<h2>ชนากานต์ เชื้อพงษ์พันธ์</h2>
-<p>Medical Technology Student</p>
-<p>ยินดีต้อนรับสู่เว็บไซต์ Portfolio ของฉัน</p>
-<a class='btn' href='about.html'>About Me</a>
-</section>
-<section style='padding:60px 8%'>
-<div class='card fade'>
-<h2>Welcome ✨</h2>
-<p>เว็บไซต์นี้จัดทำขึ้นเพื่อรวบรวมประวัติส่วนตัว ประวัติการศึกษา ความสามารถ ทักษะ และช่องทางการติดต่อ</p>
-</div>
-</section>
-<footer style='text-align:center;padding:30px'>
-<p>© 2026 Chanakan Portfolio</p>
-</footer>
-<script src='script.js'></script>
-</body>
-</html><!DOCTYPE html>
 <html lang="th">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio | หน้าหลัก</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Chakan Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">Chakan.P</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<h2>Portfolio</h2>
+    <main class="container">
+        <div class="card" style="text-align: center; border-left: none; border-top: 5px solid var(--pinkish-red);">
+            <h1>ยินดีต้อนรับสู่ Portfolio ของฉัน</h1>
+            <p style="font-size: 1.3rem; font-weight: 600;">สวัสดีค่ะ ฉันชื่อ <strong>ชาากานต์ เชื้อพงษ์พันธ์</strong></p>
+            <p>ปัจจุบันกำลังศึกษาชั้นมัธยมศึกษาปีที่ 6 สนใจด้านเทคนิคการแพทย์ ชอบเรียนรู้สิ่งใหม่ ๆ และพัฒนาทักษะด้านการออกแบบเว็บไซต์</p>
+            <div style="margin-top: 2rem;">
+                <a href="about.html" style="background-color: var(--pinkish-red); color: white; padding: 0.8rem 1.5rem; border-radius: 25px; text-decoration: none; font-weight: bold; transition: 0.3s;">ทำความรู้จักฉันเพิ่มขึ้น</a>
+            </div>
+        </div>
+    </main>
 
-<nav>
-<a href="index.html">หน้าหลัก</a>
-<a href="about.html">ประวัติส่วนตัว</a>
-<a href="education.html">ประวัติการศึกษา</a>
-<a href="skills.html">ความสามารถ</a>
-<a href="contact.html">ติดต่อ</a>
-</nav>
-
-</header>
-
-<section class="hero">
-
-<img src="images/profile.jpg" class="profile">
-
-<h1>สวัสดีค่ะ</h1>
-
-<h2>ชนากานต์ เชื้อพงษ์พันธ์</h2>
-
-<p>นักเรียนชั้นมัธยมศึกษาปีที่ 6</p>
-
-<a href="about.html" class="btn">รู้จักฉันเพิ่มเติม</a>
-
-</section>
+    <footer>
+        <p>© 2026 Chakan Cheuaphongphan. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
