@@ -1,9 +1,10 @@
 /* style.css - Starter theme */
 :root{
- -pastel-red: #FFB3B3;
-    --pinkish-red: #FF6B8B;
-    --pastel-white: #FFF5F5;
-    --dark-text: #4A3E3E;
+ -pastel-red: #FF8A8A;
+            --pinkish-red: #FF5F7E;
+            --pastel-white: #FFF5F5;
+            --dark-gray: #4A4A4A;
+            --white: #FFFFFF;
 }
 }
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Kanit',sans-serif}
