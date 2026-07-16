@@ -1,124 +1,113 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Kanit',sans-serif;
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sarabun', sans-serif;
 }
 
-body{
-background:#fff7f9;
-color:#444;
+:root {
+    --pastel-red: #FFB3B3;
+    --pinkish-red: #FF6B8B;
+    --pastel-white: #FFF5F5;
+    --dark-text: #4A3E3E;
 }
 
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 60px;
-background:white;
-box-shadow:0 5px 15px rgba(0,0,0,.08);
-position:sticky;
-top:0;
+body {
+    background-color: var(--pastel-white);
+    color: var(--dark-text);
+    line-height: 1.6;
 }
 
-header h2{
-color:#e75480;
+/* Navigation Bar */
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-nav a{
-text-decoration:none;
-margin-left:25px;
-color:#555;
-font-weight:500;
-transition:.3s;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 10%;
 }
 
-nav a:hover{
-color:#ff5b8a;
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--pinkish-red);
+    text-decoration: none;
 }
 
-.hero{
-text-align:center;
-padding:70px;
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
 }
 
-.profile{
-width:220px;
-height:220px;
-border-radius:50%;
-object-fit:cover;
-border:8px solid #ffd6e2;
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark-text);
+    font-weight: 600;
+    transition: color 0.3s;
 }
 
-.hero h1{
-margin-top:25px;
-font-size:45px;
-color:#ff4f7b;
+.nav-links a:hover, .nav-links a.active {
+    color: var(--pinkish-red);
 }
 
-.hero h2{
-margin-top:10px;
-font-size:28px;
+/* Container & Sections */
+.container {
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 0 2rem;
 }
 
-.hero p{
-margin-top:10px;
-font-size:20px;
+.card {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 15px rgba(255, 179, 179, 0.2);
+    border-left: 5px solid var(--pinkish-red);
+    margin-bottom: 2rem;
 }
 
-.btn{
-display:inline-block;
-margin-top:30px;
-padding:15px 35px;
-background:#ff7b9c;
-color:white;
-text-decoration:none;
-border-radius:30px;
-transition:.3s;
+h1 {
+    color: var(--pinkish-red);
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
 }
 
-.btn:hover{
-background:#ff4f7b;
+h2 {
+    color: var(--pinkish-red);
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--pastel-red);
+    padding-bottom: 0.5rem;
 }
-/* style.css - Starter theme */
-:root{
- --pink:#ff8fb1;
- --light:#fff7fa;
- --rose:#ffd9e5;
- --red:#ff6f91;
- --text:#444;
+
+p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
 }
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Kanit',sans-serif}
-html{scroll-behavior:smooth}
-body{
-background:linear-gradient(135deg,#fff 0%,#ffeaf1 55%,#fff7fa 100%);
-color:var(--text);
+
+ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
 }
-body::before{
-content:"";
-position:fixed;inset:0;pointer-events:none;opacity:.15;
-background:
-radial-gradient(circle at 15% 20%,#ffc7d8 0 8px,transparent 9px),
-radial-gradient(circle at 70% 30%,#ffd6e2 0 10px,transparent 11px),
-radial-gradient(circle at 35% 80%,#ffc7d8 0 7px,transparent 8px);
+
+li {
+    margin-bottom: 0.5rem;
 }
-header{position:sticky;top:0;display:flex;justify-content:space-between;align-items:center;padding:18px 8%;background:rgba(255,255,255,.8);backdrop-filter:blur(10px);box-shadow:0 6px 18px rgba(0,0,0,.08);z-index:99}
-.logo{font-size:1.6rem;font-weight:700;color:var(--red)}
-nav a{text-decoration:none;color:var(--text);margin-left:24px;font-weight:500;transition:.3s}
-nav a:hover,nav a.active{color:var(--red)}
-.hero{min-height:88vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:40px}
-.profile{width:220px;height:220px;border-radius:50%;object-fit:cover;border:8px solid #fff;box-shadow:0 10px 25px rgba(0,0,0,.12)}
-.hero h1{font-size:3rem;color:var(--red);margin-top:20px}
-.hero p{margin-top:10px}
-.btn{display:inline-block;margin-top:25px;padding:14px 32px;border-radius:40px;background:linear-gradient(45deg,var(--pink),var(--red));color:#fff;text-decoration:none;transition:.3s}
-.btn:hover{transform:translateY(-4px) scale(1.05)}
-.card{background:rgba(255,255,255,.85);border-radius:22px;box-shadow:0 12px 28px rgba(0,0,0,.08);padding:28px}
-.fade{opacity:0;transform:translateY(30px);transition:all .8s}
-.fade.show{opacity:1;transform:none}
-@media(max-width:768px){
-header{padding:16px 5%;flex-direction:column;gap:10px}
-nav a{margin:0 8px}
-.hero h1{font-size:2.2rem}
-.profile{width:170px;height:170px}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--pastel-red);
+    color: #ffffff;
+    margin-top: 4rem;
 }
-<!DOCTYPE html><html lang='th'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1.0'><title>About</title><link rel='stylesheet' href='style.css'><link href='https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap' rel='stylesheet'></head><body><header><div class='logo'>Portfolio</div><nav><a href='index.html'>Home</a><a class='active' href='about.html'>About</a><a href='education.html'>Education</a><a href='skills.html'>Skills</a><a href='contact.html'>Contact</a></nav></header><section class='hero'><div class='card'><img src='images/profile.jpg' class='profile'><h1>About Me</h1><h2>ชนากานต์ เชื้อพงษ์พันธ์</h2><p>Hello, I'm Nana 🌸</p><p>ปัจจุบันกำลังศึกษาชั้นมัธยมศึกษาปีที่ 6 สนใจด้านเทคนิคการแพทย์ ชอบเรียนรู้สิ่งใหม่ ๆ และพัฒนาทักษะด้านการออกแบบเว็บไซต์</p></div></section><section style='padding:40px 8%'><div style='display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px'><div class='card'><h3>👤 ชื่อ</h3><p>ชนากานต์ เชื้อพงษ์พันธ์</p></div><div class='card'><h3>🎂 วันเกิด</h3><p>1 กุมภาพันธ์ 2552</p></div><div class='card'><h3>🎓 ระดับการศึกษา</h3><p>ม.6</p></div><div class='card'><h3>💖 ความสนใจ</h3><p>Medical Technology<br>Biology<br>Web Design</p></div></div></section></body></html>
