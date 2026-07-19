@@ -1,79 +1,222 @@
+/* ========================================
+   PORTFOLIO WEBSITE
+   Author : Chanakan Chueaphongphan
+======================================== */
+
+/* Google Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ===========================
+   ROOT
+=========================== */
+
+:root{
+
+    --bg:#6D1B2E;
+
+    --heading:#FFFFFF;
+
+    --sub:#FEAEC7;
+
+    --button:#B22222;
+
+    --hover:#C94F6D;
+
+    --card:#CFE0FF;
+
+    --text:#333333;
+
+    --white:#ffffff;
+
+    --shadow:0 15px 40px rgba(0,0,0,.18);
+
+    --radius:22px;
+
+    --transition:.35s;
+
+}
+
+/* ===========================
+   RESET
+=========================== */
+
 *{
+
     margin:0;
+
     padding:0;
+
     box-sizing:border-box;
-    font-family: 'Segoe UI', sans-serif;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
 }
 
 body{
-    background:#fff7f7;
-    color:#444;
+
+    font-family:'Poppins','Kanit',sans-serif;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    overflow-x:hidden;
+
 }
 
-header{
-    background:#f8b4b4;
-    padding:20px;
-    text-align:center;
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
 }
 
-header h1{
-    color:white;
+::-webkit-scrollbar-thumb{
+
+    background:var(--hover);
+
+    border-radius:50px;
+
 }
 
-nav{
-    margin-top:15px;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:0 12px;
-    font-weight:bold;
-}
-
-nav a:hover{
-    color:#ffeaea;
-}
+/* ===========================
+   GLOBAL
+=========================== */
 
 .container{
-    width:90%;
-    max-width:1000px;
-    margin:40px auto;
+
+    width:min(1200px,90%);
+
+    margin:auto;
+
 }
 
-.card{
-    background:white;
-    border-radius:15px;
-    padding:30px;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
-}
+section{
 
-h2{
-    color:#e97b7b;
-    margin-bottom:20px;
+    padding:100px 0;
+
 }
 
 img{
-    max-width:220px;
-    border-radius:50%;
+
     display:block;
-    margin:auto;
-}
 
-table{
     width:100%;
-    border-collapse:collapse;
+
 }
 
-table td{
-    padding:12px;
-    border-bottom:1px solid #eee;
+a{
+
+    text-decoration:none;
+
 }
 
-footer{
-    margin-top:50px;
-    background:#f8b4b4;
+ul{
+
+    list-style:none;
+
+}
+
+h1{
+
+    color:var(--heading);
+
+}
+
+h2{
+
+    color:var(--sub);
+
+}
+
+p{
+
     color:white;
-    text-align:center;
-    padding:15px;
+
+    line-height:1.8;
+
+}
+
+/* ===========================
+   LOADING SCREEN
+=========================== */
+
+.loader{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#6D1B2E;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+.heart{
+
+    width:60px;
+
+    height:60px;
+
+    background:#FEAEC7;
+
+    transform:rotate(45deg);
+
+    animation:beat 1s infinite;
+
+}
+
+.heart::before,
+
+.heart::after{
+
+    content:"";
+
+    width:60px;
+
+    height:60px;
+
+    background:#FEAEC7;
+
+    position:absolute;
+
+    border-radius:50%;
+
+}
+
+.heart::before{
+
+    top:-30px;
+
+}
+
+.heart::after{
+
+    left:-30px;
+
+}
+
+@keyframes beat{
+
+0%{transform:rotate(45deg) scale(1);}
+
+50%{transform:rotate(45deg) scale(1.2);}
+
+100%{transform:rotate(45deg) scale(1);}
+
 }
