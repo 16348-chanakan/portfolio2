@@ -1029,3 +1029,269 @@ nav ul li a.active::after{
 
 }
 
+/*==================================================
+                HERO IMAGE
+==================================================*/
+
+.hero-image{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/* วงกลมด้านหลังรูป */
+
+.circle{
+
+    position:absolute;
+
+    width:430px;
+
+    height:430px;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        rgba(254,174,199,.25),
+        rgba(255,255,255,.08)
+    );
+
+    border:2px solid rgba(255,255,255,.12);
+
+    animation:circleFloat 8s ease-in-out infinite;
+
+}
+
+/* รูปโปรไฟล์ */
+
+.hero-image img{
+
+    width:350px;
+
+    height:350px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:8px solid rgba(255,255,255,.95);
+
+    position:relative;
+
+    z-index:2;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.28);
+
+    animation:profileFloat 5s ease-in-out infinite;
+
+    transition:.4s;
+
+}
+
+.hero-image img:hover{
+
+    transform:scale(1.04);
+
+}
+
+/*==================================================
+                FLOAT
+==================================================*/
+
+@keyframes profileFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-18px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes circleFloat{
+
+    0%{
+
+        transform:translateY(0) rotate(0deg);
+
+    }
+
+    50%{
+
+        transform:translateY(10px) rotate(5deg);
+
+    }
+
+    100%{
+
+        transform:translateY(0) rotate(0deg);
+
+    }
+
+}
+
+/*==================================================
+                HERO BADGES
+==================================================*/
+
+.hero-badges{
+
+    display:flex;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    margin-top:35px;
+
+}
+
+.badge{
+
+    padding:10px 18px;
+
+    border-radius:50px;
+
+    background:rgba(255,255,255,.10);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    color:#fff;
+
+    font-size:.95rem;
+
+    backdrop-filter:blur(10px);
+
+    transition:.35s;
+
+}
+
+.badge:hover{
+
+    background:var(--sub);
+
+    color:var(--bg);
+
+    transform:translateY(-5px);
+
+}
+
+/*==================================================
+                HERO CARD
+==================================================*/
+
+.hero-card{
+
+    margin-top:45px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:25px;
+
+    padding:28px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+.hero-card-item{
+
+    text-align:center;
+
+}
+
+.hero-card-item h3{
+
+    color:var(--sub);
+
+    font-size:2rem;
+
+    margin-bottom:8px;
+
+}
+
+.hero-card-item span{
+
+    color:white;
+
+    font-size:.95rem;
+
+}
+
+/*==================================================
+                SCROLL
+==================================================*/
+
+.scroll-indicator{
+
+    margin-top:70px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    color:var(--sub);
+
+    animation:scrollMove 2s infinite;
+
+}
+
+.scroll-indicator i{
+
+    font-size:1.5rem;
+
+    margin-top:8px;
+
+}
+
+@keyframes scrollMove{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
