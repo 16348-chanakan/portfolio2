@@ -2269,3 +2269,266 @@ img:hover{
 }
 
 }
+/*==================================================
+                EDUCATION PAGE
+==================================================*/
+
+.education-page{
+
+    padding:140px 8% 90px;
+
+}
+
+.education-page .section-title{
+
+    margin-bottom:70px;
+
+}
+
+.education-page .section-title h2{
+
+    color:var(--heading);
+
+    margin-bottom:15px;
+
+}
+
+.education-page .section-title span{
+
+    color:var(--sub);
+
+    font-weight:600;
+
+}
+
+.education-page .section-title p{
+
+    max-width:750px;
+
+    margin:20px auto 0;
+
+    line-height:1.9;
+
+    color:rgba(255,255,255,.9);
+
+}
+
+/*==================================================
+                    TIMELINE
+==================================================*/
+
+.timeline{
+
+    position:relative;
+
+    max-width:900px;
+
+    margin:auto;
+
+    padding:20px 0;
+
+}
+
+.timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:40px;
+
+    top:0;
+
+    width:4px;
+
+    height:100%;
+
+    background:var(--sub);
+
+    border-radius:50px;
+
+}
+
+.timeline-item{
+
+    position:relative;
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:30px;
+
+    margin-bottom:60px;
+
+}
+
+.timeline-item:last-child{
+
+    margin-bottom:0;
+
+}
+
+/*==================================================
+                TIMELINE ICON
+==================================================*/
+
+.timeline-icon{
+
+    width:80px;
+
+    height:80px;
+
+    min-width:80px;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        var(--button),
+        var(--hover)
+    );
+
+    color:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:1.8rem;
+
+    position:relative;
+
+    z-index:2;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+}
+
+/*==================================================
+                TIMELINE CARD
+==================================================*/
+
+.timeline-content{
+
+    flex:1;
+
+    background:var(--card);
+
+    border-radius:25px;
+
+    padding:30px;
+
+    color:var(--text);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.18);
+
+    transition:.35s;
+
+}
+
+.timeline-content:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.timeline-content h3{
+
+    color:var(--button);
+
+    margin-bottom:8px;
+
+    font-size:1.5rem;
+
+}
+
+.timeline-content h4{
+
+    color:#7a2846;
+
+    margin-bottom:15px;
+
+    font-weight:600;
+
+}
+
+.timeline-content p{
+
+    line-height:1.8;
+
+}
+
+/*==================================================
+                RESPONSIVE
+==================================================*/
+
+@media(max-width:768px){
+
+.timeline::before{
+
+    left:28px;
+
+}
+
+.timeline-icon{
+
+    width:56px;
+
+    height:56px;
+
+    min-width:56px;
+
+    font-size:1.3rem;
+
+}
+
+.timeline-item{
+
+    gap:18px;
+
+}
+
+.timeline-content{
+
+    padding:22px;
+
+}
+
+.timeline-content h3{
+
+    font-size:1.2rem;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.education-page{
+
+    padding:120px 5% 70px;
+
+}
+
+.timeline{
+
+    max-width:100%;
+
+}
+
+.timeline-content{
+
+    padding:18px;
+
+}
+
+.timeline-content p{
+
+    font-size:.95rem;
+
+}
+
+}
