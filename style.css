@@ -249,10 +249,6 @@ body::after{
    LOADER
 ================================*/
 
-.loader{
-   display:none;
-}
-
     position:fixed;
 
     inset:0;
