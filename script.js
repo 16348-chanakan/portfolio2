@@ -1,187 +1,159 @@
-// ===============================
-// Portfolio by Nana
-// ===============================
+/* ==========================================
+            PORTFOLIO JAVASCRIPT
+========================================== */
 
+// ===========================
+// LOADER
+// ===========================
 
-// เอฟเฟกต์ Fade In ตอนเลื่อน
-const faders = document.querySelectorAll(".fade");
+window.addEventListener("load", () => {
 
-const observer = new IntersectionObserver((entries)=>{
+    const loader = document.querySelector(".loader");
 
-entries.forEach(entry=>{
+    if (loader) {
 
-if(entry.isIntersecting){
+        setTimeout(() => {
 
-entry.target.classList.add("show");
+            loader.style.opacity = "0";
+            loader.style.visibility = "hidden";
+
+            document.body.style.overflow = "auto";
+
+        }, 1200);
+
+    }
+
+});
+
+// ===========================
+// CURSOR GLOW
+// ===========================
+
+const cursor = document.querySelector(".cursor-glow");
+
+if (cursor) {
+
+    document.addEventListener("mousemove", (e) => {
+
+        cursor.style.left = e.clientX + "px";
+        cursor.style.top = e.clientY + "px";
+
+    });
 
 }
 
+// ===========================
+// HEADER SCROLL
+// ===========================
+
+const header = document.querySelector("header");
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 60) {
+
+        header.classList.add("sticky");
+
+    } else {
+
+        header.classList.remove("sticky");
+
+    }
+
 });
 
-},{
-threshold:0.2
-});
+// ===========================
+// SCROLL TO TOP
+// ===========================
 
-faders.forEach(item=>{
+const topBtn = document.getElementById("topBtn");
 
-observer.observe(item);
+if (topBtn) {
 
-});
+    window.addEventListener("scroll", () => {
 
+        if (window.scrollY > 300) {
 
+            topBtn.style.display = "flex";
 
+        } else {
 
-// Active Menu
+            topBtn.style.display = "none";
 
-const currentPage = window.location.pathname.split("/").pop();
+        }
 
-const menuLinks = document.querySelectorAll("nav a");
+    });
 
-menuLinks.forEach(link=>{
+    topBtn.addEventListener("click", () => {
 
-const href = link.getAttribute("href");
+        window.scrollTo({
 
-if(href === currentPage){
+            top: 0,
 
-link.classList.add("active");
+            behavior: "smooth"
+
+        });
+
+    });
 
 }
 
-});
+// ===========================
+// FADE IN
+// ===========================
 
+const observer = new IntersectionObserver((entries) => {
 
+    entries.forEach((entry) => {
 
+        if (entry.isIntersecting) {
 
-// Smooth Scroll
+            entry.target.classList.add("show");
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+        }
 
-anchor.addEventListener("click",function(e){
+    });
 
-e.preventDefault();
+}, {
 
-document.querySelector(this.getAttribute("href")).scrollIntoView({
-
-behavior:"smooth"
-
-});
-
-});
-
-});
-
-
-
-
-// ปุ่ม Scroll To Top
-
-const topButton = document.createElement("button");
-
-topButton.innerHTML="⬆";
-
-topButton.id="topBtn";
-
-document.body.appendChild(topButton);
-
-
-
-window.addEventListener("scroll",()=>{
-
-if(window.scrollY>300){
-
-topButton.style.display="block";
-
-}else{
-
-topButton.style.display="none";
-
-}
+    threshold: 0.15
 
 });
 
+document.querySelectorAll(
 
+".summary-card,.about-card,.strength-card,.timeline-content,.skill-card,.contact-card,.dream-box,.summary-box"
 
-topButton.addEventListener("click",()=>{
+).forEach((el) => {
 
-window.scrollTo({
+    el.classList.add("hidden");
 
-top:0,
-
-behavior:"smooth"
-
-});
+    observer.observe(el);
 
 });
 
+// ===========================
+// SMOOTH SCROLL
+// ===========================
 
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
+    anchor.addEventListener("click", function(e){
 
-// ปุ่ม Hover เด้ง
+        e.preventDefault();
 
-const buttons = document.querySelectorAll(".btn");
+        const target = document.querySelector(this.getAttribute("href"));
 
-buttons.forEach(btn=>{
+        if(target){
 
-btn.addEventListener("mouseenter",()=>{
+            target.scrollIntoView({
 
-btn.style.transform="translateY(-5px) scale(1.05)";
+                behavior:"smooth"
+
+            });
+
+        }
+
+    });
 
 });
-
-
-
-btn.addEventListener("mouseleave",()=>{
-
-btn.style.transform="translateY(0px) scale(1)";
-
-});
-
-});
-
-
-
-
-// Loading Console
-
-console.log("Portfolio Loaded Successfully 🌸");
-#topBtn{
-
-position:fixed;
-
-bottom:30px;
-
-right:30px;
-
-width:50px;
-
-height:50px;
-
-border:none;
-
-border-radius:50%;
-
-background:#ff7ba9;
-
-color:white;
-
-font-size:22px;
-
-cursor:pointer;
-
-display:none;
-
-box-shadow:0 5px 15px rgba(0,0,0,.2);
-
-transition:.3s;
-
-z-index:999;
-
-}
-
-#topBtn:hover{
-
-background:#ff5c8a;
-
-transform:scale(1.1);
-
-}
